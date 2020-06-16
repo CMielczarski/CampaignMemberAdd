@@ -1,0 +1,18 @@
+<template>
+    <template if:true={Spinner}>
+        <div id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </template>
+    <lightning-file-upload 
+		name="Campaign Member Upload"
+		accept={acceptedFormats}
+		record-id={recordId}
+		onuploadfinished={handleUploadFinished}
+        single>
+    </lightning-file-upload>
+</template>
