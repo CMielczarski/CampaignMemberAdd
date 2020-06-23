@@ -22,10 +22,7 @@ public with sharing class AA_CampaignMemberAddController {
                             cMemb.ContactId = csvRecordData[0];
                             }
                         if(!string.isBlank(csvRecordData[1])){
-                            cMemb.LeadId = csvRecordData[1];
-                            }
-                        if(!string.isBlank(csvRecordData[2])){
-                            cMemb.Status = csvRecordData[2];
+                            cMemb.Status = csvRecordData[1];
                             }
                         lstCampaignMembers.add(cMemb);
                         }
