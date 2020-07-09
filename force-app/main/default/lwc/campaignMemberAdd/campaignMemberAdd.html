@@ -8,11 +8,23 @@
             </div>
         </div>
     </template>
+    <lightning-formatted-text value="Upload Contacs"></lightning-formatted-text>
     <lightning-file-upload 
-		name="Campaign Member Upload"
+		name="Campaign Member Upload - Contacts"
 		accept={acceptedFormats}
 		record-id={recordId}
-		onuploadfinished={handleUploadFinished}
+		onuploadfinished={handleContactUploadFinished}
+        single>
+    </lightning-file-upload>
+    <br/>
+    <br/>
+    <br/>
+    <lightning-formatted-text value="Upload Leads"></lightning-formatted-text>
+    <lightning-file-upload 
+		name="Campaign Member Upload - Leads"
+		accept={acceptedFormats}
+		record-id={recordId}
+		onuploadfinished={handleLeadUploadFinished}
         single>
     </lightning-file-upload>
 </template>

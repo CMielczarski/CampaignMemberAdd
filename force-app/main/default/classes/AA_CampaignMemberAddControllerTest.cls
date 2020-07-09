@@ -27,7 +27,8 @@ private class AA_CampaignMemberAddControllerTest {
                 ContentVersion contentVersionSelect = [SELECT Id, Title, ContentDocumentId FROM ContentVersion WHERE Id = :contentVersionInsert.Id LIMIT 1];
                 List<ContentDocument> documents = [SELECT Id, Title, LatestPublishedVersionId FROM ContentDocument];
                 test.startTest();
-                AA_CampaignMemberAddController.processUpload(documents[0].Id, cpn.Id);
+                AA_CampaignMemberAddController.processContactUpload(documents[0].Id, cpn.Id);
+                //AA_CampaignMemberAddController.processLeadUpload(documents[0].Id, cpn.Id);
                 test.stopTest();
         }
 }
